@@ -2,11 +2,12 @@ import './BreedSelector.css'
 import { getAllBreeds } from '../apiCalls';
 import { useEffect, useState } from 'react';
 import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 
-function BreedSelector() {
+function BreedSelector({ selectedBreeds, setSelectedBreed, getImages }) {
     const [breedOptions, setOptions] = useState([])
     const [breedObjects, setBreedObjects] = useState([])
-    const [selectionOption, setSelectedBreed] = useState(null)
+    const animatedComponents = makeAnimated()
 
     useEffect(() => {
         getBreeds()
@@ -20,7 +21,6 @@ function BreedSelector() {
         try {
             const breeds = await getAllBreeds()
             if (breeds) {
-                console.log('breeds', breeds.message)
                 setOptions(breeds.message)
             }
         } catch (error) {
@@ -30,16 +30,17 @@ function BreedSelector() {
 
     const formatOptions = () => {
         Object.keys(breedOptions).map(breed => {
-            breedObjects.push({value: breed, label: breed})
+            breedObjects.push({ value: breed, label: breed })
         })
     }
 
     return (
         <div className='select'>
             <Select
-                defaultValue={selectionOption}
+                defaultValue={selectedBreeds}
                 onChange={setSelectedBreed}
                 options={breedObjects}
+                components={animatedComponents}
                 isMulti
                 styles={{
                     control: (baseStyles, state) => ({
@@ -50,6 +51,7 @@ function BreedSelector() {
                     })
                 }}
             />
+            <button onClick={getImages}>Submit</button>
         </div>
     )
 }
