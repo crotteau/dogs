@@ -1,7 +1,7 @@
-import './BreedSelector.css'
+import './BreedSelector.css';
+import Select from 'react-select';
 import { getAllBreeds } from '../apiCalls';
 import { useEffect, useState } from 'react';
-import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
 function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages, setError }) {
@@ -29,9 +29,9 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages, setError
     }
 
     const formatOptions = () => {
-       const options =  Object.keys(breedOptions).map(breed => {
-            return ({ 
-                value: breed, label: breed 
+        const options = Object.keys(breedOptions).map(breed => {
+            return ({
+                value: breed, label: breed
             })
         })
         setBreedObjects(options)
@@ -47,7 +47,7 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages, setError
                 components={animatedComponents}
                 isMulti
                 styles={{
-                    control: (baseStyles, state) => ({
+                    control: (baseStyles) => ({
                         ...baseStyles,
                         width: "20vw",
                         height: "100%",

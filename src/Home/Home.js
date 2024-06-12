@@ -3,12 +3,12 @@ import { getRandomBreed } from '../apiCalls';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home({setError}) {
- const [homeImage, setImage] = useState(null)
+function Home({ setError }) {
+    const [homeImage, setImage] = useState(null)
 
- useEffect(() => {
-    displayHomeImage()
- }, [])
+    useEffect(() => {
+        displayHomeImage()
+    }, [])
 
     const displayHomeImage = async () => {
         try {
@@ -25,7 +25,7 @@ function Home({setError}) {
         <section className="home">
             <h2>Welcome! View all your favorite dogs breeds.</h2>
             <Link to="/search" className="start-search">Start Searching</Link>
-            <img src={homeImage} alt="dog" style={{maxWidth: "60vw"}}></img>
+            <img src={homeImage} alt="dog" style={{ maxWidth: "60vw" }}></img>
         </section>
     )
 }

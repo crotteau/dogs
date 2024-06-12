@@ -22,6 +22,7 @@ h2 {
     font-size: larger;
     font-weight: bold;
     border-radius: 10px;
+
     &:hover {
         cursor: pointer;
         color: rgb(255, 162, 0);

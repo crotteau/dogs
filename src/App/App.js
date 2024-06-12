@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
 import BreedSelector from '../BreedSelector/BreedSelector';
 import BreedImages from '../BreedImages/BreedImages';
+import NotFound from '../NotFound/NotFound';
 import Home from '../Home/Home';
-import { useState, useEffect } from 'react';
-import { getBreedImages, getRandomBreeds } from '../apiCalls';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { getBreedImages } from '../apiCalls';
 
 function App() {
   const [selectedBreeds, setSelectedBreed] = useState(null)
@@ -48,15 +49,14 @@ function App() {
             />,
             <BreedImages
               chosenImages={chosenImages}
-              selectedBreeds={selectedBreeds}
             />
           ]}
           />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
-  );
+  )
 }
 
 export default App;

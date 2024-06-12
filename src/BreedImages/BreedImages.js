@@ -1,8 +1,8 @@
 import './BreedImages.css';
-import { useState, useEffect } from 'react';
 import dog from '../assets/dog.png';
+import { useState, useEffect } from 'react';
 
-function BreedImages({ chosenImages, selectedBreeds }) {
+function BreedImages({ chosenImages }) {
     const [allImages, setAllImages] = useState([])
 
     useEffect(() => {
@@ -25,11 +25,12 @@ function BreedImages({ chosenImages, selectedBreeds }) {
             setAllImages(allImages => [...allImages, images])
         })
     }
+
     if (chosenImages.length === 0) {
         return (
             <section className="image-container-none">
                 <p className="image-container-prompt">Hey there! Select some breeds to view more!</p>
-                <img src={dog} alt="stern-dog" style={{ width: "20vw", height: "40vh" }}></img>
+                <img src={dog} alt="stern-dog" style={{ width: "20vw", height: "fit-content" }}></img>
             </section>
         )
     }

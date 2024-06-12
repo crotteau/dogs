@@ -11,7 +11,8 @@
 .App-name, 
 .fetch-error,
 .image-container-none,
-.home {
+.home,
+.not-found {
   text-decoration: none;
   margin-left: 1em;
   color: rgb(138, 16, 187);
@@ -23,4 +24,8 @@
   border-radius: 5px;
   background-color: rgb(255, 162, 0);
   cursor: pointer;
+}
+
+.not-found {
+  font-size: x-large;
 }

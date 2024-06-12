@@ -67,4 +67,13 @@
     .breed-card {
         width: 80vw;
     }
+
+  .image-container-none {
+    flex-direction: column;
+    width: 90vw;
+  }  
+
+  .image-container-prompt {
+    padding-top: 0em;
+  }
 }

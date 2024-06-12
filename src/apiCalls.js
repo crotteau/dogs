@@ -1,5 +1,5 @@
 async function getAllBreeds() {
-    const response = await fetch(`https://dog.ceo/api/breeds/list/all`)
+    const response = await fetch('https://dog.ceo/api/breeds/list/all')
     if (!response.ok) {
         throw new Error(`An error has occurred: ${response.status}`)
     }
@@ -17,7 +17,7 @@ async function getBreedImages(breed) {
 }
 
 async function getRandomBreed() {
-    const response = await fetch(`https://dog.ceo/api/breeds/image/random/1`)
+    const response = await fetch('https://dog.ceo/api/breeds/image/random/1')
     if (!response.ok) {
         throw new Error(`An error has occurred: ${response.status}`)
     }
