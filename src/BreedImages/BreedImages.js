@@ -1,5 +1,4 @@
 import './BreedImages.css';
-import ImageCard from '../ImageCard/ImageCard';
 import { useState, useEffect } from 'react';
 
 function BreedImages({ chosenImages, selectedBreeds }) {
@@ -9,15 +8,16 @@ function BreedImages({ chosenImages, selectedBreeds }) {
         if (chosenImages.length > 0) {
             setAllImages([])
             displayImages()
-        } 
+        }
     }, [chosenImages])
 
     const displayImages = () => {
         chosenImages.forEach(breed => {
             const images = breed.map((image) => {
+                const breedName = image.split('/')
                 return (
                     <div className="breed-card" style={{ backgroundImage: `url(${image})` }} key={image}>
-                        <p>{selectedBreeds}</p>
+                        <p className="breed-name hidden">{breedName[4]}</p>
                     </div>
                 )
             })

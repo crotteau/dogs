@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
-function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages }) {
+function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages, setError }) {
     const [breedOptions, setOptions] = useState([])
     const [breedObjects, setBreedObjects] = useState([])
     const animatedComponents = makeAnimated()
@@ -24,14 +24,17 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages }) {
                 setOptions(breeds.message)
             }
         } catch (error) {
-            console.log(error)
+            setError(error)
         }
     }
 
     const formatOptions = () => {
-        Object.keys(breedOptions).map(breed => {
-            breedObjects.push({ value: breed, label: breed })
+       const options =  Object.keys(breedOptions).map(breed => {
+            return ({ 
+                value: breed, label: breed 
+            })
         })
+        setBreedObjects(options)
     }
 
     return (
@@ -47,8 +50,10 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages }) {
                     control: (baseStyles, state) => ({
                         ...baseStyles,
                         width: "20vw",
-                        borderColor: state.isFocused ? "blue" : "grey",
-                        cursor: "pointer"
+                        height: "100%",
+                        border: "3px solid orange",
+                        cursor: "pointer",
+                        fontsize: "1em"
                     })
                 }}
             />

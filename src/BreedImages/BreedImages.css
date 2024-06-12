@@ -9,13 +9,31 @@
 .breed-card {
     width: 23vw;
     height: 35vh;
-    border-style: solid;
-    overflow-y: hidden;
     background-size: cover;
 }
 
 .breed-image {
     width: inherit;
+}
+
+.breed-name {
+    display: none;
+}
+
+.breed-card:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(255, 200, 0);
+
+    .breed-name {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.608);
+        width: fit-content;
+        padding: 0.5em;
+        margin-left: 1em;
+        font-weight: 600;
+        font-size: larger;
+    }
 }
 
 @media screen and (max-width: 500px) {
