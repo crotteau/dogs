@@ -15,3 +15,9 @@ This simple React app uses the [Dog API](https://dog.ceo/dog-api/) to display im
 <img src="https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black" alt="react">
 <img src="https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white" alt="react-router">
 
+## Improvements
+Given more time, I would prioritize implementing these features:
+- E2E testing with Cypress and typechecking
+- More specific URLs based on breed search
+- Improve responsive UI and dry up CSS
+- For accessibility, make images tabbable 
