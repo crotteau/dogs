@@ -16,7 +16,17 @@ async function getBreedImages(breed) {
     return breedImages
 }
 
+async function getRandomBreed() {
+    const response = await fetch(`https://dog.ceo/api/breeds/image/random/1`)
+    if (!response.ok) {
+        throw new Error(`An error has occurred: ${response.status}`)
+    }
+    const randomBreeds = await response.json()
+    return randomBreeds
+}
+
 export {
     getAllBreeds,
-    getBreedImages
+    getBreedImages,
+    getRandomBreed
 }
