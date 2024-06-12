@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
-function BreedSelector({ selectedBreeds, setSelectedBreed, getImages }) {
+function BreedSelector({ selectedBreeds, setSelectedBreed, resetImages }) {
     const [breedOptions, setOptions] = useState([])
     const [breedObjects, setBreedObjects] = useState([])
     const animatedComponents = makeAnimated()
@@ -35,8 +35,9 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, getImages }) {
     }
 
     return (
-        <div className='select'>
+        <div className="select">
             <Select
+                className="select-dropdown"
                 defaultValue={selectedBreeds}
                 onChange={setSelectedBreed}
                 options={breedObjects}
@@ -45,13 +46,13 @@ function BreedSelector({ selectedBreeds, setSelectedBreed, getImages }) {
                 styles={{
                     control: (baseStyles, state) => ({
                         ...baseStyles,
-                        width: '20vw',
-                        borderColor: state.isFocused ? 'blue' : 'grey',
-                        cursor: 'pointer'
+                        width: "20vw",
+                        borderColor: state.isFocused ? "blue" : "grey",
+                        cursor: "pointer"
                     })
                 }}
             />
-            <button onClick={getImages}>Submit</button>
+            <button onClick={resetImages}>Submit</button>
         </div>
     )
 }
