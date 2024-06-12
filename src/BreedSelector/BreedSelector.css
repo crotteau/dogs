@@ -1,0 +1,22 @@
+.select {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2em;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.75em;
+    margin-left: 1em;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(255, 162, 0);
+    border-style: none;
+
+    &:hover {
+        background-color: rgb(138, 16, 187);
+        color: white;
+    }
+}
