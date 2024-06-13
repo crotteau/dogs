@@ -7,9 +7,9 @@ This simple React app uses the [Dog API](https://dog.ceo/dog-api/) to display im
 [Megan Crotteau](https://www.linkedin.com/in/megancrotteau/)
 
 ## Screenshots of app
-<img width="1659" alt="Screenshot 2024-06-12 at 2 30 03 PM" src="https://github.com/crotteau/dogs/assets/149750476/18efab80-373f-4a64-ab47-f3231625688a">
-<img width="1659" alt="Screenshot 2024-06-12 at 2 29 03 PM" src="https://github.com/crotteau/dogs/assets/149750476/42e9f505-c51b-4da5-9663-88c1b4067c26">
-<img width="835" alt="Screenshot 2024-06-12 at 1 56 23 PM" src="https://github.com/crotteau/dogs/assets/149750476/78d40e7a-35bd-4550-9444-e299448b1dfd">
+<img width="1657" alt="Screenshot 2024-06-12 at 11 04 48 PM" src="https://github.com/crotteau/dogs/assets/149750476/e2ae0867-c3bc-4de0-a996-9208935e67d6">
+<img width="1675" alt="Screenshot 2024-06-12 at 11 05 05 PM" src="https://github.com/crotteau/dogs/assets/149750476/6b96350e-0659-4aad-84d7-a67a9cee0f27">
+<img width="1661" alt="Screenshot 2024-06-12 at 11 05 28 PM" src="https://github.com/crotteau/dogs/assets/149750476/b448cb16-239b-420f-951e-a1f47cc222d8">
 
 
 ## Technologies Used
