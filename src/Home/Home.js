@@ -23,7 +23,7 @@ function Home({ setError }) {
 
     return (
         <section className="home">
-            <h2>Welcome! View all your favorite dogs breeds.</h2>
+            <h2>Welcome! View all your favorite dog breeds.</h2>
             <Link to="/search" className="start-search">Start Searching</Link>
             <img src={homeImage} alt="dog" style={{ maxWidth: "60vw" }}></img>
         </section>
