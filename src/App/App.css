@@ -1,15 +1,16 @@
 .App-header {
   min-height: fit-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: left;
   font-family: "Shrikhand", serif;
   font-size: xx-large;
   margin-top: 0.5em;
-  background-color: rgb(189, 183, 86);
+  padding: 0.5em 0em;
+  background-color: rgb(163, 132, 29);
 }
 
-.App-name, 
+.App-name,
 .fetch-error,
 .image-container-none,
 .home,
@@ -29,4 +30,22 @@
 
 .not-found {
   font-size: x-large;
+}
+
+.tennis {
+  height: 2em;
+  width: fit-content;
+  animation: glide 35s infinite;
+}
+
+@keyframes glide {
+  0% {
+    transform: translate(1vw, 5vh);
+  }
+  50% {
+    transform: translate(60vw, 5vh);
+  }
+  100% {
+    transform: translate(1vw, 5vh);
+  }
 }
